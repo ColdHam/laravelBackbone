@@ -1,6 +1,10 @@
 <?php
 
-class CommentsController extends BaseController {
+namespace V1;
+
+use BaseController;
+
+class PostsController extends BaseController {
 
     /**
      * Display a listing of the resource.

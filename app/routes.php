@@ -10,12 +10,13 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::group(array('prefix' => 'v1'), function()
+{
+  Route::resource('posts', 'V1\PostsController');
+  Route::resource('posts.comments', 'V1\PostsCommentsController');
+});
 
 Route::get('/', function()
 {
 	return View::make('layouts.application')->nest('content','app');
 });
-
-Route::resource('posts', 'PostsController');
-
-Route::resource('comments', 'CommentsController');
