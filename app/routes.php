@@ -15,3 +15,7 @@ Route::get('/', function()
 {
 	return View::make('layouts.application')->nest('content','app');
 });
+
+Route::resource('posts', 'PostsController');
+
+Route::resource('comments', 'CommentsController');
